@@ -1,0 +1,45 @@
+{% load static %}
+
+<nav class="w-full flex justify-between items-center py-3 px-4 fixed z-50 bg-black">
+
+  <!-- Logo -->
+  <div class="w-6/12">
+    <a href="/">
+      <img
+        src="{% static 'images/lol-logo.png' %}"
+        alt="Logo"
+        class="w-1/22"
+      >
+    </a>
+  </div>
+
+  <!-- Barra de busca e botões -->
+  <div class="w-6/12 flex justify-end items-center gap-3">
+
+    <!-- Campo de pesquisa -->
+    <form>
+      <input
+        type="text"
+        placeholder="Pesquisar..."
+        class="py-1 px-2 rounded-md border border-gray-300 bg-white text-black
+               focus:outline-none focus:ring-2 focus:ring-primary_red"
+      >
+    </form>
+
+    <!-- Botão de login -->
+    <a href="#">
+      <button class="bg-gray-800 text-white py-1 px-3 rounded-md">
+        Login
+      </button>
+    </a>
+
+    <!-- Botão de editar perfil -->
+    <a href="#">
+      <button class="bg-gray-800 text-white py-1 px-3 rounded-md">
+        Editar Perfil
+      </button>
+    </a>
+
+  </div>
+
+</nav>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Clipezudos
+{% endblock %}
+
+{% block content %}
+<h1>Testzudo</h1>
+
+{% for filme in object_list %}
+<div class="py-15">
+    <a href="{% url 'filme:detalhes_clipezudos' filme.pk %}"><h1>{{ filme }}</h1></a>
+    <hr>
+    <a href="{% url 'filme:detalhes_clipezudos' filme.pk %}"><img src ="{{ filme.thumb.url }}"></a>
+    {% endfor %}
+</div>
+{% endblock %}

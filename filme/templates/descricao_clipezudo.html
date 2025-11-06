@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Clipezudos {{ object }}
+{% endblock %}
+
+
+{% block content %}
+<div class="py-18">
+    <h1>{{ object }}</h1>
+    <img src="{{ object.thumb.url}}">
+    <h2> {{ object.descricao }} </h2>
+</div>
+
+{{% endblock %}

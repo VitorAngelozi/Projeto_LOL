@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+LolFlix
+{% endblock %}
+
+{% block content %}
+
+<!-- SEÇÃO PRINCIPAL -->
+<header class="relative min-h-screen bg-black flex justify-center items-center border-b-8 border-gray-700">
+    <div class="absolute inset-0">
+        <!-- Imagem de fundo -->
+        <img src="{% static 'images/gragas.jpg' %}" alt="Gragas" class="w-full h-full object-cover opacity-40">
+    </div>
+
+    <div class="relative z-10 text-gray-100 text-center px-6 max-w-3xl">
+        <h1 class="font-bold text-4xl md:text-5xl mb-4">
+            Tudo sobre League of Legends!
+        </h1>
+        <h3 class="text-lg md:text-xl mb-4">
+            Assista jogadas lendárias, momentos épicos e o melhor do LoL em um só lugar.
+        </h3>
+        <h4 class="text-base md:text-lg mb-6">
+            Comece agora: insira seu e-mail para explorar o universo de Runeterra.
+        </h4>
+
+        <form method="post" class="flex justify-center items-center max-w-md mx-auto w-full px-2">
+  <input
+    type="email"
+    placeholder="Digite seu e-mail..."
+    class="flex-grow py-2.5 px-4 rounded-l-full border border-gray-400 text-black
+           placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500
+           focus:border-red-500 transition duration-200"
+  >
+  <button
+    type="submit"
+    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 px-6
+           rounded-r-full flex items-center justify-center transition duration-200"
+  >
+    Acessar
+    <ion-icon name="chevron-forward-outline" class="ml-1 text-xl"></ion-icon>
+  </button>
+</form>
+
+            </button>
+        </form>
+    </div>
+</header>
+
+
+<!-- SEÇÃO 1 -->
+<section class="flex flex-col md:flex-row items-center justify-center border-b-8 border-gray-800 bg-black text-white">
+    <div class="md:w-1/2 p-8 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-semibold mb-4">Aproveite o melhor do LoLFlix</h2>
+        <p class="text-lg text-gray-300">
+            Clipes, análises, memes e transmissões — tudo em um só lugar.
+            O universo de League of Legends, sem filtros.
+        </p>
+    </div>
+    <div class="md:w-1/2 flex justify-center items-center">
+        <img src="{% static 'images/teemo.jpg' %}" alt="Teemo" class="w-10/12 max-h-[400px] object-cover rounded-xl shadow-lg">
+    </div>
+</section>
+
+
+<!-- SEÇÃO 2 -->
+<section class="flex flex-col md:flex-row-reverse items-center justify-center border-b-8 border-gray-800 bg-black text-white">
+    <div class="md:w-1/2 p-8 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-semibold mb-4">Nem todo LoL é igual</h2>
+        <p class="text-lg text-gray-300">
+            Aqui não tem LoLzinho do ovo — aqui é pura nostalgia, memes e emoção.
+            Relembre os tempos de ouro e redescubra o jogo que marcou gerações.
+        </p>
+    </div>
+    <div class="md:w-1/2 flex justify-center items-center">
+        <img src="{% static 'images/lolita.jpg' %}" alt="Personagem" class="w-10/12 max-h-[400px] object-cover rounded-xl shadow-lg">
+    </div>
+</section>
+
+
+<!-- SEÇÃO 3 -->
+<section class="flex flex-col md:flex-row items-center justify-center border-b-8 border-gray-800 bg-black text-white">
+    <div class="md:w-1/2 p-8 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-semibold mb-4">Mais raiva que bater o mindinho na quina</h2>
+        <p class="text-lg text-gray-300">
+            Quem nunca jurou desinstalar depois de um 0/10, mas logou de novo no dia seguinte?
+            Bem-vindo ao ciclo eterno. 🍻
+        </p>
+    </div>
+    <div class="md:w-1/2 flex justify-center items-center">
+        <img src="{% static 'images/gordox.jpg' %}" alt="Gordox" class="w-10/12 max-h-[400px] object-cover rounded-xl shadow-lg">
+    </div>
+</section>
+
+
+<!-- RODAPÉ -->
+<footer class="bg-black text-gray-400 px-5 py-10 border-t border-gray-800">
+    <ul class="flex flex-col md:flex-row justify-between items-center text-sm gap-3">
+        <li>&copy; 2025 LoLFlix</li>
+        <li>Feito com Python (Django), por Vitor Angelozi</li>
+        <li>Todos os direitos reservados a Riot Games</li>
+    </ul>
+</footer>
+
+{% endblock %}
