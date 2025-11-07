@@ -1,20 +1,6 @@
-# Arquivos do Django
-*.pyc
-__pycache__/
+# Banco de dados SQLite
 db.sqlite3
-/media/
-*.log
 
-# IDEs
-.vscode/
-.idea/
-
-# Ambientes virtuais
-venv/
-.env/
-env/
-.env/
-venv*/ 
-
-# Migrations cache
-*/migrations/__pycache__/
+# Compilados do Python
+__pycache__/
+*.pyc
