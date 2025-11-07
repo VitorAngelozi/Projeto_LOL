@@ -7,9 +7,23 @@ Clipezudos {{ object }}
 
 {% block content %}
 <div class="py-18">
-    <h1>{{ object }}</h1>
-    <img src="{{ object.thumb.url}}">
-    <h2> {{ object.descricao }} </h2>
+    {% for video in object.musica_filme.all %}
+    <a href="{{ video.video }}">
+        <h1>{{ video.nome }}</h1>
+    </a>
+    <a href="{{ video.video }}">
+        <img src="{{ video.thumb.url}}">
+    </a>
+    <h2> {{ video.descricao }} </h2>
+    {% endfor %}
+
 </div>
 
-{{% endblock %}
+<div class="py-18">
+    {% for clipes in clipes_relacionados %}
+    <h1> {{clipes.nome}} </h1>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

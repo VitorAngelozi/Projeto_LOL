@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Filme
+from .models import Filme, Musica
 from django.views.generic import TemplateView, ListView, DetailView
 
 
@@ -24,3 +24,10 @@ class Clipezudos(ListView):
 class DescricaoClipezudo(DetailView):
     template_name = 'descricao_clipezudo.html'
     model = Filme
+
+    def get_context_data(self, **kwargs):
+        context = super(DescricaoClipezudo, self).get_context_data(**kwargs)
+
+        clipes_relacionados = Filme.objects.filter(categoria=self.get_object().categoria)[0:5]
+        context['clipes_relacionados'] = clipes_relacionados
+        return context
