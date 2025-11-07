@@ -7,9 +7,12 @@ Clipezudos {{ object }}
 
 {% block content %}
 <div class="py-18">
-    <h1>{{ object }}</h1>
-    <img src="{{ object.thumb.url}}">
-    <h2> {{ object.descricao }} </h2>
+    {% for video in object.musica_filme.all %}
+        <h1></h1>
+    {% endfor %}
+    <a>
+
+    </a>
 </div>
 
-{{% endblock %}
+{% endblock %}

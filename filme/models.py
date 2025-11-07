@@ -29,3 +29,5 @@ class Musica(models.Model):
     descricao       = models.TextField(max_length = 500)
     data_criacao    = models.DateField(default = timezone.now)
 
+    def __str__(self):
+        return self.filme.nome + "-" + self.nome
