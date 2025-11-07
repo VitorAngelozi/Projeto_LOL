@@ -1,0 +1,6 @@
+# Banco de dados SQLite
+db.sqlite3
+
+# Compilados do Python
+__pycache__/
+*.pyc
